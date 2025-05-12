@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SalesSystem.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace SalesSystem.Views
         public Loginn()
         {
             this.InitializeComponent();
+            Object[] campos = { Email, Password };
+            DataContext = new LoginViewModel(campos);
         }
     }
 }
